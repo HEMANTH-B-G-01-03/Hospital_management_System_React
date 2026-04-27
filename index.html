@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -104,5 +104,174 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/ajax-utils.js"></script>
   <script src="js/script.js"></script>
+</body>
+</html> -->
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HospitalCare</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <nav id="header-nav" class="navbar navbar-default">
+    <div class="container">
+
+      <div class="navbar-header">
+
+        <a href="index.html" class="pull-left visible-md visible-lg">
+          <img src="images/hospital/hero-4.jpg" style="height:60px; border-radius:10px;">
+        </a>
+
+        <div class="navbar-brand">
+          <a href="index.html"><h1>HospitalCare</h1></a>
+          <p>
+            <span>Trusted Medical Services</span>
+          </p>
+        </div>
+
+        <button id="navbarToggle" type="button" class="navbar-toggle collapsed"
+          data-toggle="collapse" data-target="#collapsable-nav">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div id="collapsable-nav" class="collapse navbar-collapse">
+        <ul id="nav-list" class="nav navbar-nav navbar-right">
+
+          <li class="visible-xs active">
+            <a href="index.html">
+              <span class="glyphicon glyphicon-home"></span> Home
+            </a>
+          </li>
+
+          <li>
+            <a href="#" onclick="$dc.loadMenuCategories();">
+              <span class="glyphicon glyphicon-plus"></span><br class="hidden-xs"> Departments
+            </a>
+          </li>
+
+          <li>
+            <a href="single-category.html">
+              <span class="glyphicon glyphicon-user"></span><br class="hidden-xs"> Doctors
+            </a>
+          </li>
+
+          <li>
+            <a href="new.html">
+              <span class="glyphicon glyphicon-calendar"></span><br class="hidden-xs"> Appointment
+            </a>
+          </li>
+
+          <li id="phone" class="hidden-xs">
+            <a href="tel:1234567890">
+              <span>+91 8050541303</span>
+            </a>
+            <div>24/7 Emergency</div>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero text-center text-white">
+  <div class="container">
+    <h1>Your Health, Our Priority</h1>
+    <p>Providing world-class healthcare services</p>
+    <a href="new.html" class="btn btn-primary btn-lg">Book Appointment</a>
+  </div>
+</section>
+
+<!-- MAIN CONTENT (dynamic still works) -->
+<div id="main-content" class="container mt-5"></div>
+
+<!-- QUICK SECTIONS -->
+<section class="container text-center mt-5">
+
+  <div class="row">
+
+    <div class="col-md-4">
+      <div class="card p-4">
+        <h4>Emergency Care</h4>
+        <p>24/7 emergency support for all patients</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-4">
+        <h4>Qualified Doctors</h4>
+        <p>Experienced specialists across departments</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-4">
+        <h4>Modern Equipment</h4>
+        <p>Advanced medical technology for better care</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="panel-footer">
+  <div class="container">
+    <div class="row">
+
+      <section class="col-sm-4">
+        <span>Working Hours:</span><br>
+        Mon-Sun: 24/7 Open
+        <hr class="visible-xs">
+      </section>
+
+      <section class="col-sm-4">
+        <span>Address:</span><br>
+        Mangalore, Karnataka, India
+        <p>Providing trusted healthcare services</p>
+        <hr class="visible-xs">
+      </section>
+
+      <section class="col-sm-4">
+        <p>"Excellent doctors and staff. Highly recommended!"</p>
+        <p>"Quick service and great care."</p>
+      </section>
+
+    </div>
+
+    <div class="text-center mt-3">
+      © 2026 HospitalCare
+    </div>
+
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/ajax-utils.js"></script>
+<script src="js/script.js"></script>
+
 </body>
 </html>
