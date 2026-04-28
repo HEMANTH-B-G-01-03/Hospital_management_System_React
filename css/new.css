@@ -1,52 +1,46 @@
 body {
-    font-size: 16px;
-    color: #fff;
-    background-color: #61122f;
-    font-family: 'Oxygen', sans-serif;
-  }
-  
-  /** HEADER **/
-  #header-nav {
-  background-color: #f6b319;
-  border-radius: 0;
-  border: 0;
-  height: 185px;
-  }
-  
-  #logo-img {
-  background: url('../images/restaurant-logo.png') no-repeat;
-  background-size:  80px 80px;
-  width: 80px;
-  height: 80px;
-  
-  margin: 5px 5px 5px 0;
-  }
-  
-  .navbar-brand {
-  padding-top: 25px;
-  }
-  
-  .navbar-brand h1 { /* Restaurant name */
-  font-family: 'Lora', serif;
-  text-align: left;
-  color: #557c3e;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px #222;
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: .75;
-  }
-  .navbar-brand a:hover, .navbar-brand a:focus {
-  text-decoration: none;
-  }
-  .navbar-brand p { /* Kosher cert */
-  color: #000;
-  text-transform: uppercase;
-  font-size: .7em;
-  margin-top: 10px;
-  }
-  .navbar-brand p span { /* Star-K */
-  vertical-align: middle;
-  }
+  background: #F4F8FB;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+/* HERO */
+.hero {
+  height: 400px;
+  background: url("../images/hospital/hero-4.jpg") center/cover no-repeat;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.5);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+/* CARD */
+.card {
+  border-radius: 15px;
+  padding: 15px;
+  background: white;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
