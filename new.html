@@ -1,42 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Chu's China Bistro</title>
-    <style>
-        #logo-img{
-            background:url("logo1.png") no-repeat;
-            background-size:  100px 100px;
-            width: 100px;
-            height:100px;
-            margin: 10px 15px 10px 0;
-        }
-    </style>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/new.css">
-    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type="test/css">
-    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Book Appointment - HospitalCare</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #e8f5e9);
+      height: 100vh;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background: white;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .navbar h1 {
+      color: #0A66C2;
+      font-size: 22px;
+      margin: 0;
+    }
+
+    /* FORM CARD */
+    .form-container {
+      max-width: 500px;
+      margin: 80px auto;
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .form-control {
+      border-radius: 10px;
+      margin-bottom: 15px;
+      height: 45px;
+    }
+
+    .btn-primary {
+      background: #0A66C2;
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .btn-primary:hover {
+      background: #084c9e;
+    }
+
+    /* SUCCESS MESSAGE */
+    .success {
+      display: none;
+      color: green;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <nav id="header-nav" class="navbar navbar-default">
-            <div class="container">
-                <div class="navbar-header">
-                    <a href="new.html" class="pull-left">
-                        <div id="logo-img"></div>
-                    </a>
-                    <div class="navbar-brand">
-                        <a href="new.html"><h1>ITC HOTELS</h1></a>
-                        
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <script src="js/jquery-3.6.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/new.js"></script>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <h1>HospitalCare</h1>
+  </div>
+</nav>
+
+<!-- FORM -->
+<div class="form-container">
+
+  <h2>Book Appointment</h2>
+
+  <input type="text" id="name" class="form-control" placeholder="Patient Name">
+
+  <input type="date" id="date" class="form-control">
+
+  <select id="dept" class="form-control">
+    <option>Cardiology</option>
+    <option>Neurology</option>
+    <option>Orthopedics</option>
+    <option>Pediatrics</option>
+  </select>
+
+  <button class="btn btn-primary" onclick="bookAppointment()">Confirm Booking</button>
+
+  <div class="success" id="successMsg">
+    ✅ Appointment Booked Successfully!
+  </div>
+
+</div>
+
+<!-- JS -->
+<script>
+function bookAppointment() {
+  const name = document.getElementById("name").value;
+  const date = document.getElementById("date").value;
+
+  if (name === "" || date === "") {
+    alert("Please fill all details");
+    return;
+  }
+
+  document.getElementById("successMsg").style.display = "block";
+}
+</script>
+
 </body>
 </html>
